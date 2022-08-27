@@ -1,0 +1,432 @@
+body{
+    background-color: black;
+    padding-bottom: 100%;
+    color: #30e630;
+    font-family: 'Source Code Pro', monospace;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    word-wrap: break-word;
+    -webkit-user-select: none;
+    
+}
+
+.errorMsg{
+    width: 600px;
+    
+    border: 4px solid #30e630;
+
+    position: absolute;
+    font-weight: bold;
+    z-index: 1000;
+}
+
+.top{
+    width: 100%;
+    background-color: black;
+    display: flex;
+    border-bottom: 3px solid #30e630;
+}
+
+.topText{
+    color: white;
+    margin-top: auto;
+    margin-bottom: auto;
+    
+    width: 84%;
+    padding-left: 5%;
+    font-size: 170%;
+    font-weight: bold;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    
+}
+
+.x{
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 1%;
+    padding-bottom : 1%;
+    width: 12%;
+    text-align: center;
+    font-size: 150%;
+    color: white;
+    /*background-color: red;*/
+    margin-top: 1%;
+    margin-bottom: 0;
+    margin-right: 0;
+}
+
+.content{
+
+    background-color: black;
+    padding-bottom: 1%;
+
+}
+
+.contentText{
+    margin-top: 0;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 200%;
+    padding-top: 2%;
+    padding-bottom: 0.5%;
+
+    color: #30e630;
+    
+}
+
+.exitBtn{
+    font-size: 150%;
+    width: 35%;
+    text-align: center;
+    margin-left: 58%;
+    margin-right: 7%;
+    background-color: black;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border: 3px solid #30e630;
+    color: #30e630;
+ 
+}
+
+.exitBtn:hover{
+    cursor: pointer;
+    border: 3px solid lightgrey;
+    color: lightgrey;
+}
+
+.x:hover{
+    background-color: red;
+    cursor: pointer;
+}
+
+#holder{
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 26%;
+    height: 500px;
+    overflow-y: auto;
+    /* Track */
+
+}
+
+#console{
+    margin-right: 2%;
+    width: 68%;
+    height: 500px;
+    
+}
+
+#holder, #console{
+    border: 6px solid #30e630;
+    border-radius: 10px;
+    font-weight: bold;
+    overflow-y: auto;
+}
+
+#notificationText, #consoleText{
+    font-size: 150%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 6px solid #30e630; 
+    margin-top: 0;
+    margin-bottom: 0;
+    
+}
+
+#notificationCode{
+    overflow-y: auto;
+}
+
+#notificationText{
+    text-align: center;
+    
+    
+}
+
+#consoleText{
+    padding-left: 5%;
+}
+
+#entirepage{
+    display: flex;
+}
+
+#consoleCode{
+    padding-left: 5%;
+    line-height: 1.6;
+    font-size: 115%;
+    padding-right: 5%;
+    
+}
+
+.name, .id, .status{
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 85%;
+}
+
+.name{
+    text-decoration: underline;
+    font-size: 90%;
+    font-weight: bold;
+}
+
+.indivTargetHolder{
+    
+    padding-top: 4%;
+    padding-bottom: 4%;
+    border-bottom: 2px dotted #30e630;
+}
+
+#textbox{
+    color: lime;
+    background-color: black;
+    width: 85%;
+    font-size: 25px;
+    border: 6px solid #30e630;
+    
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom-left-radius: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: 'Source Code Pro', monospace;
+    padding-left: 1%;
+    transition: 0.5s;
+}
+
+#searchBar{
+    width: 92%;
+    margin-left: 5%;
+    margin-right: 3%;
+    display: flex;
+    margin-top: 0;
+}
+
+#consoleLabel{
+    margin-left: 5%;
+    margin-top: 3%;
+    border: 6px solid #30e630;
+    border-bottom: none;
+    margin-bottom: 0;
+    width: 20%;
+    font-size: 135%;
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-weight: bold;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#text{
+    width: 15%;
+    font-size: 25px;
+    color: black;
+    background-color: #30e630;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    border: 6px solid #30e630;
+    font-weight: bold;
+    transition: 0.7s;
+}
+
+#text:hover{
+    background-color: red;
+    border: 6px solid red;
+    transition: 0.7s;
+}
+
+#text:hover{
+    cursor: pointer;
+}
+
+#menu{
+    display: none;
+    position: absolute;
+    width: 970px;
+    height: 350px;
+    /*originally 350 height*/
+    top: 616px;
+    /*originally 260 top*/
+    left: 5.55%;
+    z-index: 999;
+    border: 6px solid #30e630;
+    background-color: black;
+    transition: 1s;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    overflow-y: auto;
+}
+
+.action, .action1, .action2{
+    display: inline-block;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 0.8%;
+    margin-bottom: 0.8%;
+    font-size: 145%;
+    transition:0.5s;
+}
+
+.action1{
+    color: orange;
+}
+
+.action2{
+    color: red;
+}
+
+
+
+.action:hover{
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 250%;
+    transition: 0.5s;
+    color: yellow;
+}
+
+.action2:hover{
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 170%;
+    transition: 0.5s;
+}
+
+.action1:hover{
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 170%;
+    transition: 0.5s;
+}
+
+#topHolder{
+    display: flex;
+    border-bottom: 6px solid 
+}
+
+#dob, #coords{
+    
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 110%;
+    color: lightgrey;
+}
+
+#dob{
+    width: 19%;
+    margin-left: 3%;
+}
+
+#coords{
+    width: 34%;
+    margin-left: 3%;
+}
+
+#title{
+    margin-left: 3%;
+    font-size: 155%;
+    font-weight: bold;
+    /*text-decoration: underline;*/
+ 
+
+    /*border-right: 6px solid lime;*/
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    width: 33%;
+    margin-right: 3%;
+}
+
+#close{
+    width: 5%;
+    text-align: center;
+    font-size: 135%;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#close{
+    color: red;
+    cursor: pointer;
+}
+
+.commandDisplay{
+    font-size: 150%;
+    margin-left: 3%;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#sup{
+    font-size: 45%;
+    text-decoration: underline;
+}
+
+#sup:hover{
+    cursor: pointer;
+}
+
+.subField{
+    background-color: black;
+    font-family: 'Source Code Pro', monospace;
+    color: orange;
+    margin-left: 5%;
+    margin-top: 0;
+    border: 2px solid orange;
+    padding-top: 0.75%;
+    padding-bottom: 1.5%;
+    font-size: 175%;
+    margin-bottom: 2%;
+    border-radius: 10px;
+    padding-left: 2%;
+    width: 85%;
+}
+
+.notification{
+    position: absolute;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    top: -500px;
+    z-index: 1001;
+    border: 5px solid yellow;
+    background-color: black;
+    color: yellow;
+    border-radius: 10px;
+    text-align: center;
+    
+}
+
+.notificationHeader{
+    margin-left: 3%;
+    font-size: 350%;
+    text-decoration: underline;
+    margin-right: 3%;
+    margin-top: 4%;
+    margin-bottom: 1%;
+    font-weight: bold;
+}
+
+.notificationContent{
+    margin-left: 3%;
+    font-size: 275%;
+    margin-right: 3%;
+}
